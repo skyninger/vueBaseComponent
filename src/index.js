@@ -1,12 +1,20 @@
-import Hello from './components/hello'
-let VueComponentsLib = {
-  Hello
-}
+import Alert from './components/alert'
+import Dialog from './components/dialog'
+import Button from './components/button'
+let VueComponentsLib = [
+  Alert,
+  Dialog,
+  Button
+]
 
 const install = function (Vue, opts = {}) {
-  Object.keys(VueComponentsLib).forEach((key) => {
-    Vue.component(key, VueComponentsLib[key])
+  VueComponentsLib.map(component => {
+    component.install(Vue)
   })
+  /* Object.keys(VueComponentsLib).forEach((key) => {
+    console.log(key)
+    Vue.component(key, VueComponentsLib[key])
+  }) */
 }
 
 if (typeof window !== 'undefined' && window.Vue) {

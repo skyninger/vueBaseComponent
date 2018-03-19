@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <hello />
     <img src="./assets/logo.png">
     <router-view/>
   </div>
@@ -13,6 +12,7 @@ export default {
 </script>
 
 <style>
+@import url('//unpkg.com/element-ui/lib/theme-chalk/index.css');
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
