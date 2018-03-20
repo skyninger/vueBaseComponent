@@ -24,6 +24,7 @@
           <slot name="footer"></slot>
         </div>
       </div>
+      <div class="black-bj" v-show="visible"></div>
     </div>
   </transition>
 </template>
@@ -150,3 +151,17 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .black-bj{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+  }
+  .el-dialog{
+    z-index: 1;
+  }
+</style>
